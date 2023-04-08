@@ -7,10 +7,8 @@
    <title>6uoomuom`s Portfolio</title>
    <meta name='description' content='Portfolio for world-renowned software engineer 6uoomuom'>
    <meta name='auther' content='6uoomuom'>
-   <link rel='icon' type='image/png' href='assets/imgs/favicon.png'
+   <link rel='icon' type='image/png' href='assets/imgs/favicon.png'>
    <script src="https://kit.fontawesome.com/470da8f574.js" crossorigin="anonymous"></script>
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
    <link rel='stylesheet' href='style.css'>
    <script src='main.js' defer></script>
@@ -43,7 +41,7 @@
       <button class="home__contact">Contact Me</button>
    </section>
    <!-- about -->
-   <section id="about">
+   <section id="about" class='section'>
       <h1>About Me</h1>
       <p>상상한 무궁무진한 아이디어를 제가 배운 기술로 구현해가는 과정이 재밌습니다. <br>
       항상 새로운 시도를 두려워하지 않는 프론트엔드 개발자가 되겠습니다.</p>
@@ -52,7 +50,7 @@
             <div class="major__icon">
                <i class="fa-brands fa-html5"></i>
             </div>
-            <div class="major__title">Front-end</div>
+            <h2 class="major__title">Front-end</h2>
             <div class="major__description">
                HTML, CSS, JavaScript
             </div>
@@ -61,7 +59,7 @@
             <div class="major__icon">
                <i class="fa-solid fa-mobile-button"></i>
             </div>
-            <div class="major__title">Mobile</div>
+            <h2 class="major__title">Mobile</h2>
             <div class="major__description">
                Android, iOS, React Native, Flutter
             </div>
@@ -70,7 +68,7 @@
             <div class="major__icon">
                <i class="fa-sharp fa-solid fa-database"></i>
             </div>
-            <div class="major__title">Back-end</div>
+            <h2 class="major__title">Back-end</h2>
             <div class="major__description">
                Java, JavaScript, NodeJS
             </div>
@@ -79,14 +77,16 @@
       <div class="about__jobs">
          <div class="job">
             <img src="assets/imgs/jobs/logo.png" alt="Friends" class="job__logo">
-            <p class="job__name">Friends Software</p>
-            <p class="job__period">2023.03 ~ current</p>
+            <div class="job__description">
+               <p class="job__name">Currently working at Friends Software as Engineer</p>
+               <p class="job__period">2023 March - Until now</p>
+            </div>
          </div>
          <div class="job"></div>
       </div>
    </section>
    <!-- skills -->
-   <section id="skills">
+   <section id="skills" class='section'>
       <h1>Skills</h1>
       <h2>Skills & Attributes</h2>
       <p>
@@ -164,7 +164,7 @@
       </div>
    </section>
    <!-- work -->
-   <section id="work">
+   <section id="work" class='section'>
       <h1>My work</h1>
       <h3>Projects</h3>
       <div class="work__categories">
@@ -193,7 +193,7 @@
       </div>
    </section>
    <!-- testimonials -->
-   <section id="testimonials">
+   <section id="testimonials" class='section'>
       <h1>Testimonials</h1>
       <h3>See what they say about me</h3>
       <div class="testimonial">
@@ -216,7 +216,7 @@
       </div>
    </section>
    <!-- contact -->
-   <section id="contact">
+   <section id="contact" class='section'>
       <h1 class="contact__title">Let's talk</h1>
       <h2 class="contact__email">6uoomuom@gmail.com</h2>
       <div class="contact__links">
