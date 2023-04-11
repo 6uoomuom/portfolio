@@ -23,7 +23,7 @@ navbarMenu.addEventListener('click', (event) => {
    scrollTo.scrollIntoView({ behavior: 'smooth' });
 })
 
-// Handle scrolling when tapping on the 'Contact Me' btn
+// Handle click on the 'Contact Me' button on home
 const contactMe = document.querySelector('.home__contact');
 contactMe.addEventListener('click', (event) => {
    const target = event.target;
@@ -34,3 +34,15 @@ contactMe.addEventListener('click', (event) => {
    const scrollTo = document.querySelector(link);
    scrollTo.scrollIntoView({ behavior: 'smooth' });
 });
+
+// Make home slowly fade to transparent as the window scrolls down
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => { 
+   home.style.opacity = 1 - window.scrollY / homeHeight;
+})
+// const home = document.querySelector('.home__container');
+// document.addEventListener('scroll', () => {
+//    const scrollPos = window.scrollY;
+//    home.style.opacity = 1 - scrollPos / 712 (구역의 height 값);
+// });
