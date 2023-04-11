@@ -198,6 +198,7 @@ p {
    margin: auto;
 }
 /* About */
+
 .about__majors {
    display: flex;
    justify-content: space-between;
