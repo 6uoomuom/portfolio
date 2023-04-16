@@ -19,20 +19,14 @@ navbarMenu.addEventListener('click', (event) => {
    if (link == null) { 
       return;
    }
-   const scrollTo = document.querySelector(link);
-   scrollTo.scrollIntoView({ behavior: 'smooth' });
+   navbarMenu.classList.remove('open');
+   scrollIntoView(link);
 })
 
 // Handle click on the 'Contact Me' button on home
-const contactMe = document.querySelector('.home__contact');
-contactMe.addEventListener('click', (event) => {
-   const target = event.target;
-   const link = target.dataset.link;
-   if (link == null) {
-      return;
-   }
-   const scrollTo = document.querySelector(link);
-   scrollTo.scrollIntoView({ behavior: 'smooth' });
+const homeContactBtn = document.querySelector('.home__contact');
+homeContactBtn.addEventListener('click', () => {
+   scrollIntoView('#contact');
 });
 
 // Make home slowly fade to transparent as the window scrolls down
@@ -41,8 +35,23 @@ const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => { 
    home.style.opacity = 1 - window.scrollY / homeHeight;
 })
-// const home = document.querySelector('.home__container');
-// document.addEventListener('scroll', () => {
-//    const scrollPos = window.scrollY;
-//    home.style.opacity = 1 - scrollPos / 712 (구역의 height 값);
-// });
+
+//Show "arrow up" button when scrolling down
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll', () => {
+   if (window.scrollY > homeHeight / 2) {
+      arrowUp.classList.add('visible');
+   } else {
+      arrowUp.classList.remove('visible');
+   }
+});
+
+//Handle click on the "arrow up" button
+arrowUp.addEventListener('click', () => {
+   scrollIntoView('#home');
+});
+
+function scrollIntoView(selector) { 
+   const scrollTo = document.querySelector(selector);
+   scrollTo.scrollIntoView({ behavior: 'smooth' });
+}
